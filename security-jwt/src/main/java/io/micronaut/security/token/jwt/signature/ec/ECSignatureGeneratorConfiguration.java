@@ -19,6 +19,7 @@ package io.micronaut.security.token.jwt.signature.ec;
 import java.security.interfaces.ECPrivateKey;
 
 /**
+ * Elliptic curve signature generation configuration.
  * @author Sergio del Amo
  * @since 1.0
  */

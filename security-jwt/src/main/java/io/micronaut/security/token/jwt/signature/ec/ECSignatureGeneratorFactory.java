@@ -21,7 +21,7 @@ import io.micronaut.context.annotation.Factory;
 import io.micronaut.security.token.jwt.signature.SignatureGeneratorConfiguration;
 
 /**
- * Creates {@link io.micronaut.security.token.jwt.signature.SignatureConfiguration} for each {@link ECSignatureGeneratorConfiguration} bean.
+ * Creates {@link io.micronaut.security.token.jwt.signature.SignatureGeneratorConfiguration} for each {@link ECSignatureGeneratorConfiguration} bean.
  *
  * @author Sergio del Amo
  * @since 1.0

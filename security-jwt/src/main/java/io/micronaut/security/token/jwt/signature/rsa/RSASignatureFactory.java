@@ -21,6 +21,8 @@ import io.micronaut.context.annotation.Factory;
 import io.micronaut.security.token.jwt.signature.SignatureConfiguration;
 
 /**
+ * Creates {@link SignatureConfiguration} for each {@link RSASignatureConfiguration} bean.
+ *
  * @author Sergio del Amo
  * @since 1.0
  */

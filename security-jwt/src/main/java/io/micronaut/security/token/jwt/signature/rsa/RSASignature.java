@@ -27,7 +27,7 @@ import javax.validation.constraints.NotNull;
 import java.security.interfaces.RSAPublicKey;
 
 /**
- * RSA signature configuration.
+ * RSA signature.
  * @see <a href="http://connect2id.com/products/nimbus-jose-jwt/examples/jwt-with-rsa-signature">JSON Web Token (JWT) with RSA signature</a>
  *
  * @author Sergio del Amo

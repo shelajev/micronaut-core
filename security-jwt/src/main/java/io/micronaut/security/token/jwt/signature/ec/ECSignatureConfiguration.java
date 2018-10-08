@@ -21,6 +21,7 @@ import com.nimbusds.jose.JWSAlgorithm;
 import java.security.interfaces.ECPublicKey;
 
 /**
+ * Elliptic curve signature configuration.
  * @author Sergio del Amo
  * @since 1.0
  */
