@@ -15,6 +15,16 @@ The `graal-native-image` feature adds four important items:
 3. A `Dockerfile` which can be used to construct the native image using Docker and a script `docker-build.sh` to run it.
 4. A `build-native-image.sh` script to build the native image without using Docker.
 
+==== Before building the native image using Docker
+
+Building the native image works on the JVM bytecode, so one needs to build the application before trying to convert it the the GraalVM native image. To do it, please ensure that you've followed the [getting started](docs/guide/languageSupport/graal.adoc#getting-started) process. 
+
+Then build the project normally:
+
+[source,bash]
+----
+$ ./gradlew build
+----
 
 ==== Build native image using Docker
 
@@ -22,9 +32,10 @@ To build your native image using Docker simply run:
 
 [source,bash]
 ----
-$ docker build . -t hello-world
+$ docker build . -t hello-world # <0>
 $ docker run --network=host hello-world # <1>
 ----
+<0> If the `RUN native-image` step fails with error code 137 it might be that your Docker instance doesn't have enough memory for the AOT compilation. Please increase the [memory available to Docker](https://docs.docker.com/config/containers/resource_constraints/#limit-a-containers-access-to-memory). 
 <1> Start the Docker container with `--network=host` makes the application uses the same network as the host so all ports are exposed automatically without needing to map them manually
 
 Or use the provided script:
